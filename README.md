@@ -7,9 +7,7 @@ https://github.com/petroGG/Basic-Well-Log-Interpretation
 ###### His coding example was then modified with our own shaley-sand methods that are now being employed in Geolog as python loglan code. This particular example is from the Gulf of Mexico. The example has confentional and NMR logs. This is a shaly-sand well that utilizes Dual-Water and Waxman-Smits equations to account for the conductance of the clays in the calculations of the water saturations.  
 
 ###### Normally we would load the log data directly from a Geolog well from a loglan template specifically made for python as shown below: 
-
-![geolog.png](attachment:geolog.png)
-
+![Image](geolog.png)
 ###### However, for this notebook the conventional logs and NMR data are being loaded from the Gulf_Coast_NMR.txt text file provided. 
 
 ###### The original PetroGG gave us a good foundation in building proper depth plots, cross plots and histograms in python. We have made a number of additions to the original PetroGG. First of all, we have modified the code to use a Vshale and not Vclay as was previously employed. Almost all shales have less than 100% clay volume. We have personally sampled some of the greasiest, gumbo shales to find that the maximum clay content was only about 65% according to the XRD or FTIR mineralogy data. Therefore, estimating the clay endpoint parameters for a clay point is a challenge since this 100% clay points is an imaginary points. This point does not exist in the data. Instead we use a shale point which can be observed in most shaly-sands data sets with a well develped shale. However, with sufficient mineralogy data from core samples or elemental log data like Schlumberger's Elemental Capture Spectroscopy (ECS), we could model the volume of clay for future applications. 
@@ -23,8 +21,7 @@ https://github.com/petroGG/Basic-Well-Log-Interpretation
 
                                    CBW = 0.2 * Vshale + 0
 
-![cbw_vsh.png](attachment:cbw_vsh.png)
-
+![Image](cbw_vsh.png)
 ###### In this example we are using NMR data from an older Numar NMR tool that was only capable of measuring an NMR effective porosity (MPHI) and NMR Bulk Volume Irreducible (MBVI); all in the effective porosity system. This tool did not have the capability to employ the PR06 activation for the measurement of the Clay Bound Water (CBW) volume where the entire NMR signal then would be approaching total porosity. 
 
 ###### The NMR Capillary Bound Irreducible Water (MBVI) is calculated from the NMR T2 distribution by partitioning this T2 distribution into the Capillary Bound Water (MBVI) and Free Fluid (MFFI) based on a cutoff. The MFFI pore volume is associated with the larger pores with movable fluid where MBVI has the smaller pores with Capillary Bound Water that is a non-movable fluids. This partition point is called the T2 Cutoff, and for this clastic well the T2 Cutoff was 33ms. In Carbonate formations the T2 Cutoff is typically > 100ms due to the lower killing-strength in carbonate rock. 
@@ -44,9 +41,7 @@ https://github.com/petroGG/Basic-Well-Log-Interpretation
 ###### We are using a standard iterative approach to Waxman-Smits or er have an option to use the equation provided by Crain in lieu of this iterative approach. 
 
 ###### Experience has shown that Waxman-Smits method is a bit more flexible to use in shaly-sand interpretations in that we can model the Waxman-Smits cementation exponent m* to vary with Vsh calibrated to Swb according to the trends observed in the wet intervals. A Cross Plot of Swb vs.  m*_apparent (MNA) is shown below.  The apparent m* increases as Vsh or Swb increase. This can best be ovserved in the wet intervals. m*_apparent goes quite high in the hydrocarbon bearing intervals and should not be used for the m* vs. Vsh or Swb trend. The m* at a Vsh or Swb of 0 (y-intercept) is the Archie m. , but in this case m* increases with increased Swb. We have also found that a wrong Rw can lead to an unrealistic y-intercept to give us feedback as to our choice of Rw too.
-
-![mna_vsh.png](attachment:mna_vsh.png)
-
+![Image](mna_vsh.png)
 ###### In the plot above for the y-axis values we calculated the apparent m* data using the following equation:
 
         m*_apparent = log10(Rw/(RT*(1+Rw*B*Qv)))/log10(PHIT)
