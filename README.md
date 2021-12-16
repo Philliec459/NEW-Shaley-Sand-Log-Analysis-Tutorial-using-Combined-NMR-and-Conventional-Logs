@@ -1,5 +1,3 @@
-### Introduction:
-
 ## Introduction:
 
 This Python tutorial started from the PetroGG repository written by Mihai on GitHub:
