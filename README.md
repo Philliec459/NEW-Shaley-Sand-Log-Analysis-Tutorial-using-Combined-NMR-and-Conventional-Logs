@@ -10,7 +10,7 @@ This example is from the Gulf of Mexico where we use a typical shaley-sand inter
 
 Normally we would load the log data directly from a Geolog Well using a loglan template specifically made for python as shown below: 
 
-  ![geolog.png](geolog.png)
+![geolog.png](geolog2.png)
 
 However, for this notebook the conventional logs and NMR data are being loaded from the Excel Gulf_Coast_NMR.xlsx file provided in this repository. 
 
@@ -32,7 +32,7 @@ We typically use the plot of Vshale (or Swb) vs. CBWa as shown below to model CB
                                    CBW = 0.2 * Vshale + 0
 
 
-  ![cbw_vsh.png](cbw_vsh.png)
+![cbw_vsh.png](cbw_vsh2.png)
 
 In actuality, this plot defines the porosity of shale as the CBW intercept at 100% Vsh. 
 
@@ -60,7 +60,7 @@ We are using both the standard iterative approach to Waxman-Smits and the option
 
 Experience has shown that Waxman-Smits method is a bit more flexible to use in shaley-sand interpretations in that we can model the Waxman-Smits cementation exponent m* to vary with Vsh calibrated to Swb according to the trends observed in the wet intervals. A Cross Plot of Vsh vs. m*_apparent (MNA) is shown below.  The apparent m* increases as Vsh (or Swb) increase. This can best be observed in the wet intervals. m*_apparent goes quite high in the hydrocarbon bearing intervals and should not be used for the m* vs. Vsh or Swb trend. The m* at a Vsh (or Swb) of 0 (y-intercept) is the Archie m.  m* increases with increased Vsh (or Swb). We have also found that a wrong Rw can lead to an unrealistic y-intercept to give us feedback as to our choice of Rw too.
 
-  ![mna_vsh.png](mna_vsh.png)
+![mna_vsh.png](mna_vsh2.png)
 
 In the plot above, we calculated the initial, apparent m* using the following equation used on the y-axis:
 
