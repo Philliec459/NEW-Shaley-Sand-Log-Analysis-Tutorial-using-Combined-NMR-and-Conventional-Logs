@@ -65,7 +65,7 @@ This plot shows m*_apparent vs. Vsh. We are useing water saturations on the colo
 
 Finally, for our interpretation we typically compare our log analysis based Bulk Volume Water in the effective porosity system (BVWe) to MBVI, that is also in the effective porosity system, to determine what intervals have hydrocarbon saturations at irreducible water saturation with no movable water. In general, this is where we expect to have water free hydrocarbons if permeability is greater than 1mD. When BVWe is higher than MBVI, then we expect some movable water depending on the relative permeability and mobility of these fluids.
 
-![final](final.png)
+![final](final2.png)
 
 ---
 
