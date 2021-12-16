@@ -12,7 +12,7 @@ This example is from the Gulf of Mexico where we use a typical shaley-sand inter
 
 Normally we would load the log data directly from a Geolog Well using a loglan template specifically made for python as shown below: 
 
-![geolog.png](geolog.png)
+  ![geolog.png](geolog.png)
 
 However, for this notebook the conventional logs and NMR data are being loaded from the Excel Gulf_Coast_NMR.xlsx file provided in this repository. 
 
@@ -34,7 +34,7 @@ We typically use the plot of Vshale (or Swb) vs. CBWa as shown below to model CB
                                    CBW = 0.2 * Vshale + 0
 
 
-![cbw_vsh.png](cbw_vsh.png)
+  ![cbw_vsh.png](cbw_vsh.png)
 
 The NMR data in this example from an older Numar NMR tool that was only capable of measuring an NMR effective porosity (MPHI) and NMR Bulk Volume Irreducible (MBVI); all in the effective porosity system. This tool did not have the capability to employ the PR06 activation for the measurement of the Clay Bound Water (CBW) volume where the entire NMR signal then would be approaching total porosity. 
 
@@ -60,7 +60,7 @@ We are using both a standard iterative approach to Waxman-Smits or the option to
 
 Experience has shown that Waxman-Smits method is a bit more flexible to use in shaley-sand interpretations in that we can model the Waxman-Smits cementation exponent m* to vary with Vsh calibrated to Swb according to the trends observed in the wet intervals. A Cross Plot of Swb vs.  m*_apparent (MNA) is shown below.  The apparent m* increases as Vsh or Swb increase. This can best be observed in the wet intervals. m*_apparent goes quite high in the hydrocarbon bearing intervals and should not be used for the m* vs. Vsh or Swb trend. The m* at a Vsh or Swb of 0 (y-intercept) is the Archie m, but in this case m* increases with increased Swb. We have also found that a wrong Rw can lead to an unrealistic y-intercept to give us feedback as to our choice of Rw too.
 
-![mna_vsh.png](mna_vsh.png)
+  ![mna_vsh.png](mna_vsh.png)
 
 In the plot above, we calculated the apparent m* using the following equation that is used on the y-axis:
 
@@ -73,7 +73,7 @@ This plot shows m*_apparent vs. Vsh. We are useing water saturations on the colo
 
 Finally, for our interpretation we typically compare our log analysis based Bulk Volume Water in the effective porosity system (BVWe) to MBVI, that is also in the effective porosity system, to determine what intervals have hydrocarbon saturations at irreducible water saturation with no movable water. In general, this is where we expect to have water free hydrocarbons if permeability is greater than 1mD. When BVWe is higher than MBVI as indicated by the cyan colored fill below in the next to the last track, then we expect some movable water depending on the relative permeability and mobility of these fluids.
 
-![final](final2.png)
+  ![final](final2.png)
 
 ---
 
